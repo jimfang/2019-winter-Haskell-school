@@ -17,10 +17,13 @@ toDigitsRev :: Integer -> [Integer]
 toDigitRev = reverse . toDigits
 
 -- doubleEveryOther
+doubleEveryOtherFromLeft :: [Integer] -> [Integer]
+doubleEveryOtherFromLeft [ ]         = [ ]
+doubleEveryOtherFromLeft [ x ]       = [ x ]
+doubleEveryOtherFromLeft [ x : y : rest ] = [ x : y * 2 ] ++ doubleEveryOther rest
+
 doubleEveryOther :: [Integer] -> [Integer]
-doubleEveryOther []         = []
-doubleEveryOther [x]        = [x]
-doubleEveryOther [x:y:rest] = [x: y*2] ++ doubleEveryOther rest
+doubleEveryOther = reverse . doubleEveryOtherFromLeft . reverse
 
 -- sumDigits
 sumDigits :: [Integer] -> Integer
