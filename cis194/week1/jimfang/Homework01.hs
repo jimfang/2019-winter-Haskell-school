@@ -14,7 +14,7 @@ toDigits num
 
 -- toDigitRev
 toDigitsRev :: Integer -> [Integer]
-toDigitRev = reverse . toDigits
+toDigitsRev = reverse . toDigits
 
 -- doubleEveryOther
 doubleEveryOther :: [Integer] -> [Integer]
