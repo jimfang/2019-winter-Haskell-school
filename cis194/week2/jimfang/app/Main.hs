@@ -1,6 +1,6 @@
 module Main where
 
-import Lib
+import LogAnalysis
 
 main :: IO ()
-main = someFunc
+main = parse
